@@ -79,9 +79,12 @@ class Assignment1:
         def run(self):
             while self.outer.sim_active:
                 # Machine sleeps for a random amount of time
-                self.machineSleep()
+                self.machineSleep()[cite: 36]
                 # Machine wakes up and sends a print request
-                # Write code here
+                self.outer.semaphore.acquire()
+                self.outer.binary.acquire()
+                self.printRequest(self.machineID)
+                self.outer.binary.release()
 
         def machineSleep(self):
             sleepSeconds = random.randint(1, self.outer.MAX_MACHINE_SLEEP)
