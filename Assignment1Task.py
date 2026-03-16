@@ -69,6 +69,7 @@ class Assignment1:
             time.sleep(sleepSeconds)
 
         def printDox(self, printerID):
+            self.outer.binary.acquire()
             print(f"Printer ID: {printerID} : now available")
             # Print from the queue
             self.outer.print_list.queuePrint(printerID)
