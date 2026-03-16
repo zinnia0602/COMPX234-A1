@@ -59,6 +59,7 @@ class Assignment1:
                 self.outer.semaphore.acquire()
                 self.outer.binary.acquire()
                 self.printRequest(self.machineID)
+                self.outer.binary.release()
                 # Grab the request at the head of the queue and print it
                 sleepSeconds = random.randint(1, self.outer.MAX_PRINTER_SLEEP)
                 time.sleep(sleepSeconds)
