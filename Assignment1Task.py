@@ -57,7 +57,8 @@ class Assignment1:
                 # Simulate printer taking some time to print the document
                 self.printerSleep()
                 # Grab the request at the head of the queue and print it
-                # Write code here
+                sleepSeconds = random.randint(1, self.outer.MAX_PRINTER_SLEEP)
+                time.sleep(sleepSeconds)
 
         def printerSleep(self):
             sleepSeconds = random.randint(1, self.outer.MAX_PRINTER_SLEEP)
