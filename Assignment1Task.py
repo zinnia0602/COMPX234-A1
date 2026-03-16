@@ -73,9 +73,7 @@ class Assignment1:
             self.outer.print_list.queuePrint(printerID)
             self.outer.binary.release()
             self.outer.semaphore.release()
-            print(f"Printer ID: {printerID} : now available")
-            # Print from the queue
-            self.outer.print_list.queuePrint(printerID)
+
 
     # Machine class
     class machineThread(threading.Thread):
