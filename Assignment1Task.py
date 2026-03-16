@@ -85,7 +85,7 @@ class Assignment1:
         def run(self):
             while self.outer.sim_active:
                 # Machine sleeps for a random amount of time
-                self.machineSleep()[cite: 36]
+                # self.machineSleep()[cite: 36]
                 # Machine wakes up and sends a print request
                 self.outer.semaphore.acquire()
                 self.outer.binary.acquire()
