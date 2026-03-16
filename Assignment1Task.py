@@ -56,6 +56,7 @@ class Assignment1:
             while self.outer.sim_active:
                 # Simulate printer taking some time to print the document
                 self.printerSleep()
+                self.outer.semaphore.acquire()
                 # Grab the request at the head of the queue and print it
                 sleepSeconds = random.randint(1, self.outer.MAX_PRINTER_SLEEP)
                 time.sleep(sleepSeconds)
