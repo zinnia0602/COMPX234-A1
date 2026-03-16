@@ -30,7 +30,10 @@ class Assignment1:
             p.start()
             
         # Start all the threads
-        # Write code here
+        for i in range(self.NUM_MACHINES):
+            m = self.machineThread(i, self)
+            self.mThreads.append(m)
+            m.start()
 
         # Let the simulation run for some time
         time.sleep(self.SIMULATION_TIME)
