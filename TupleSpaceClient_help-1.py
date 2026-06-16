@@ -35,20 +35,7 @@ def main():
             cmd = parts[0]
             message = ""
 
-            # TASK 2: Build the protocol message string to send to the server.
-            # Format:  "NNN X key"        for READ / GET
-            #          "NNN P key value"   for PUT
-            # where NNN is the total message length as a zero-padded 3-digit number,
-            # X is "R" for READ and "G" for GET.
-            # Hint: for READ/GET, size = 6 + len(key). For PUT, size = 7 + len(key) + len(value).
-            # Reject lines with invalid format or key+" "+value > 970 chars.
-
-
-            # TASK 3: Send the message to the server, then receive the response.
-            # - Send:    sock.sendall(message.encode())
-            # - Receive: first read 3 bytes to get the response size (like the server does).
-            #            Then read the remaining (size - 3) bytes to get the response body.
-
+            try:
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
