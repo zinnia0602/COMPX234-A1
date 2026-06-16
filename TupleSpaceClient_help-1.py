@@ -68,6 +68,8 @@ def main():
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
+
+            sock.sendall(message.encode())
             
 
     except (socket.error, ValueError) as e:
