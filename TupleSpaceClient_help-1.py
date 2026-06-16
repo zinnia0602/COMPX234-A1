@@ -46,9 +46,12 @@ def main():
                     command_char = "R" if cmd == "READ" else "G"
                     size = 6 + len(key)
                     message = f"{size:03d} {command_char} {key}"
+                    
+                elif cmd == "PUT":
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
+            
 
     except (socket.error, ValueError) as e:
         print(f"Error: {e}")
