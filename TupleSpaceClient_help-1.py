@@ -20,6 +20,7 @@ def main():
 
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((hostname, port))
 
     try:
         for line in lines:
