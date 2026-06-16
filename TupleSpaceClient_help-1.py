@@ -76,7 +76,6 @@ def main():
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
-            
 
     except (socket.error, ValueError) as e:
         print(f"Error: {e}")
