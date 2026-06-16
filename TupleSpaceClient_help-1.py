@@ -23,6 +23,7 @@ def main():
         sock.connect((hostname, port))
     except socket.error as e:
         print(f"Error connecting to server: {e}")
+        sys.exit(1)
 
     try:
         for line in lines:
