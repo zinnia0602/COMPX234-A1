@@ -18,10 +18,7 @@ def main():
     with open(input_file_path, 'r') as file:
         lines = file.readlines()
 
-    # TASK 1: Create a TCP/IP socket and connect it to the server.
-    # Hint: socket.socket(socket.AF_INET, socket.SOCK_STREAM) creates the socket.
-    # Then call sock.connect((hostname, port)) to connect.
-
+    try:
 
     try:
         for line in lines:
