@@ -38,6 +38,7 @@ def main():
             try:
                 if cmd in ["READ", "GET"]:
                     if len(parts) < 2: raise ValueError("Missing key")
+                        key = parts[1]
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
