@@ -82,9 +82,8 @@ def main():
         print(f"Error: {e}")
         sys.exit(1)
     finally:
-        # TASK 4: Close the socket when done (already called for you — explain why
-        # finally: is the right place to do this even if an error occurs above).
-        sock.close()
+        if 'sock' in locals():
+            sock.close()
 
 if __name__ == "__main__":
     main()
