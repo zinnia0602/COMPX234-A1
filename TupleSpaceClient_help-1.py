@@ -21,6 +21,8 @@ def main():
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect((hostname, port))
+    except socket.error as e:
+        
 
     try:
         for line in lines:
