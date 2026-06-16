@@ -50,6 +50,8 @@ def main():
                 elif cmd == "PUT":
                     if len(parts) < 3: 
                         raise ValueError("Missing key or value")
+                    key = parts[1]
+                    value = parts[2]
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
