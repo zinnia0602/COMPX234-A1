@@ -41,6 +41,7 @@ def main():
                         raise ValueError("Missing key")
                     key = parts[1]
                     if len(key) > 970:
+                        print(f"Error: Key too long. Ignoring entry.")
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
