@@ -43,6 +43,7 @@ def main():
                     if len(key) > 970:
                         print(f"Error: Key too long. Ignoring entry.")
                         continue
+                    command_char = "R" if cmd == "READ" else "G"
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
