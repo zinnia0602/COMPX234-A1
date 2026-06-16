@@ -62,6 +62,7 @@ def main():
                     print(f"Error: Unknown command {cmd}")
                     continue
             except ValueError as e:
+                print(f"Error parsing line '{line}': {e}")
                 
 
             response = response_buffer.decode().strip()
