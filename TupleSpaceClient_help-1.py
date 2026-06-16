@@ -72,6 +72,7 @@ def main():
                 break
 
             total_size = int(size_header)
+            response_body = sock.recv(total_size - 3).decode()
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
