@@ -48,6 +48,8 @@ def main():
                     message = f"{size:03d} {command_char} {key}"
                     
                 elif cmd == "PUT":
+                    if len(parts) < 3: 
+                        raise ValueError("Missing key or value")
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
