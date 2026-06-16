@@ -63,6 +63,7 @@ def main():
                     continue
             except ValueError as e:
                 print(f"Error parsing line '{line}': {e}")
+                continue
                 
 
             response = response_buffer.decode().strip()
