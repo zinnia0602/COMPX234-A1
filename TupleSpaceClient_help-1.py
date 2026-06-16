@@ -19,6 +19,7 @@ def main():
         lines = file.readlines()
 
     try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     try:
         for line in lines:
