@@ -42,6 +42,7 @@ def main():
                     key = parts[1]
                     if len(key) > 970:
                         print(f"Error: Key too long. Ignoring entry.")
+                        continue
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
