@@ -64,12 +64,12 @@ def main():
             except ValueError as e:
                 print(f"Error parsing line '{line}': {e}")
                 continue
-                
+
+            sock.sendall(message.encode())
+            size_header = sock.recv(3).decode()
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
-
-            sock.sendall(message.encode())
             
 
     except (socket.error, ValueError) as e:
