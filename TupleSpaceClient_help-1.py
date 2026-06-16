@@ -54,6 +54,7 @@ def main():
                     value = parts[2]
                     if len(key + " " + value) > 970:
                         print(f"Error: Collated size exceeds 970 chars. Ignoring entry.")
+                        continue
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
