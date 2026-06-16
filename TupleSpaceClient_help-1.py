@@ -66,7 +66,10 @@ def main():
                 continue
 
             sock.sendall(message.encode())
+            
             size_header = sock.recv(3).decode()
+            if not size_header:
+                break
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
