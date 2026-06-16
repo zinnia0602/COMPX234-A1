@@ -71,6 +71,8 @@ def main():
             if not size_header:
                 break
 
+            total_size = int(size_header)
+
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
             
