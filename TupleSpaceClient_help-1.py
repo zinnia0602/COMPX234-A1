@@ -61,6 +61,8 @@ def main():
                 else:
                     print(f"Error: Unknown command {cmd}")
                     continue
+            except ValueError as e:
+                
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
