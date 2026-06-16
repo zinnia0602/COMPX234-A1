@@ -36,6 +36,7 @@ def main():
             message = ""
 
             try:
+                if cmd in ["READ", "GET"]:
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
