@@ -52,6 +52,8 @@ def main():
                         raise ValueError("Missing key or value")
                     key = parts[1]
                     value = parts[2]
+                    if len(key + " " + value) > 970:
+                        print(f"Error: Collated size exceeds 970 chars. Ignoring entry.")
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
