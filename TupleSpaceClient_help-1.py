@@ -59,6 +59,7 @@ def main():
                     size = 7 + len(key) + len(value)
                     message = f"{size:03d} P {key} {value}"
                 else:
+                    print(f"Error: Unknown command {cmd}")
 
             response = response_buffer.decode().strip()
             print(f"{line}: {response}")
