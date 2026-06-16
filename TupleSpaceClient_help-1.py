@@ -22,7 +22,7 @@ def main():
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect((hostname, port))
     except socket.error as e:
-        
+        print(f"Error connecting to server: {e}")
 
     try:
         for line in lines:
